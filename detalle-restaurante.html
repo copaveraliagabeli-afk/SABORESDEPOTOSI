@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Detalle Restaurante - Sabores de Potosí</title>
+</head>
+<body>
+    <div class="contenedor">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <h1>Sabores de Potosí</h1>
+            </div>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="restaurantes.html">Restaurantes</a>
+                <a href="historia.html">Historia</a>
+                <div class="auth-buttons">
+                    <a href="#" class="boton-login" onclick="mostrarLogin()">Login</a>
+                    <a href="#" class="boton-signup" onclick="mostrarSignup()">Sign Up</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Detalle del Restaurante -->
+        <section class="detalle-restaurante">
+            <div class="restaurante-header">
+                <div class="restaurante-portada">
+                    <img src="" alt="" id="restaurante-imagen">
+                </div>
+                <div class="restaurante-titulo">
+                    <h2 id="restaurante-nombre"></h2>
+                    <p class="slogan" id="restaurante-slogan"></p>
+                    <div class="calificacion-detalle">
+                        <span class="estrellas" id="restaurante-estrellas"></span>
+                        <span class="puntuacion" id="restaurante-puntuacion"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="restaurante-contenido">
+                <div class="info-basica">
+                    <div class="info-item">
+                        <h4>📍 Ubicación</h4>
+                        <p id="restaurante-ubicacion"></p>
+                    </div>
+                    <div class="info-item">
+                        <h4>⏰ Horario</h4>
+                        <p id="restaurante-horario"></p>
+                    </div>
+                    <div class="info-item">
+                        <h4>📞 Contacto</h4>
+                        <p id="restaurante-contacto"></p>
+                    </div>
+                </div>
+
+                <div class="historia-restaurante">
+                    <h3>Nuestra Historia</h3>
+                    <p id="restaurante-historia"></p>
+                </div>
+
+                <div class="platos-destacados">
+                    <h3>Platos Destacados</h3>
+                    <div class="grid-platos" id="platos-grid">
+                        <!-- Los platos se cargarán dinámicamente -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="acciones">
+                <a href="restaurantes.html" class="btn-volver">← Volver a Restaurantes</a>
+                <!--<button class="btn-reservar" onclick="realizarReserva()">📅 Hacer Reserva</button>-->
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="sobre-nosotros">
+                <h3>Sobre Nosotros</h3>
+                <p>Descubre los auténticos sabores de Potosí a través de nuestros restaurantes y platos tradicionales.</p>
+            </div>
+            <div class="redes-sociales">
+                <h3>Síguenos</h3>
+                <div class="iconos-redes">
+                    <a href="#">📱 WhatsApp</a>
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">📷 Instagram</a>
+                    <a href="#">🎵 TikTok</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script-detalle-restaurante.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Restaurantes - Sabores de Potosí</title>
+</head>
+<body>
+    <div class="contenedor">
+        <!-- Header (mismo que index.html) -->
+        <header>
+            <div class="logo">
+                <h1>Sabores de Potosí</h1>
+            </div>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="restaurantes.html" class="active">Restaurantes</a>
+                <a href="historia.html">Historia</a>
+                <div class="auth-buttons">
+                    <a href="#" class="boton-login" onclick="mostrarLogin()">Login</a>
+                    <a href="#" class="boton-signup" onclick="mostrarSignup()">Sign Up</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Slider de Restaurantes -->
+        <section class="slider-restaurantes">
+            <h2>Nuestros Restaurantes Destacados</h2>
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <!-- Restaurante 1 -->
+                    <div class="slide-restaurante active" data-id="1">
+                        <div class="restaurante-imagen">
+                            <img src="img/phisqa.jpg" alt="Phisqa Warmi">
+                        </div>
+                        <div class="restaurante-info">
+                            <h3>Phisqa Warmi</h3>
+                            <p class="slogan">"Sabor ancestral en cada plato"</p>
+                            <p class="ubicacion">📍 Calle Junín #123, Centro Histórico</p>
+                            <div class="calificacion">
+                                <span class="estrellas">★★★★★</span>
+                                <span class="puntuacion">4.8 (125 reseñas)</span>
+                            </div>
+                            <a href="detalle-restaurante.html?id=1" class="btn-ver-detalle">Ver Detalles</a>
+                        </div>
+                    </div>
+
+                    <!-- Restaurante 2 -->
+                    <div class="slide-restaurante" data-id="2">
+                        <div class="restaurante-imagen">
+                            <img src="img/res4060.jpg" alt="4060">
+                        </div>
+                        <div class="">
+                            <h3>La 4060</h3>
+                            <p class="slogan">"Cocina potosina auténtica desde 1985"</p>
+                            <p class="ubicacion">📍 Av. Villazón #456, Centro</p>
+                            <div class="calificacion">
+                                <span class="estrellas">★★★★☆</span>
+                                <span class="puntuacion">4.6 (89 reseñas)</span>
+                            </div>
+                            <a href="detalle-restaurante.html?id=2" class="btn-ver-detalle">Ver Detalles</a>
+                        </div>
+                    </div>
+
+                    <!-- Restaurante 3 -->
+                    <div class="slide-restaurante" data-id="3">
+                        <div class="restaurante-imagen">
+                            <img src="img/tenedordeplata.jpg" alt="El Tenedor de Plata">
+                        </div>
+                        <div class="restaurante-info">
+                            <h3>El Tenedor de Plata</h3>
+                            <p class="slogan">"Donde el cerro Rico se convierte en sabor"</p>
+                            <p class="ubicacion">📍 Calle Bolívar #789, Plaza 10 de Noviembre</p>
+                            <div class="calificacion">
+                                <span class="estrellas">★★★★★</span>
+                                <span class="puntuacion">4.9 (203 reseñas)</span>
+                            </div>
+                            <a href="detalle-restaurante.html?id=3" class="btn-ver-detalle">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles del Slider -->
+                <button class="slider-btn prev" onclick="cambiarSlide(-1)">❮</button>
+                <button class="slider-btn next" onclick="cambiarSlide(1)">❯</button>
+                
+                <!-- Indicadores -->
+                <div class="slider-indicadores">
+                    <span class="indicador active" data-slide="0"></span>
+                    <span class="indicador" data-slide="1"></span>
+                    <span class="indicador" data-slide="2"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer (mismo que index.html) -->
+        <footer class="footer">
+            <div class="sobre-nosotros">
+                <h3>Sobre Nosotros</h3>
+                <p>Descubre los auténticos sabores de Potosí a través de nuestros restaurantes y platos tradicionales.</p>
+            </div>
+            <div class="redes-sociales">
+                <h3>Síguenos</h3>
+                <div class="iconos-redes">
+                    <a href="#">📱 WhatsApp</a>
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">📷 Instagram</a>
+                    <a href="#">🎵 TikTok</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Agregar esto antes del cierre del body en restaurantes.html -->
+<!-- Modales Login/Signup -->
+<div id="modalLogin" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="login-username">Nombre de Usuario</label>
+                <input type="text" id="login-username" placeholder="Ingresa tu nombre de usuario" required>
+            </div>
+            <div class="input-group">
+                <label for="login-password">Contraseña</label>
+                <input type="password" id="login-password" placeholder="Ingresa tu contraseña" required>
+            </div>
+            <div class="form-options">
+               
+                
+            </div>
+            <button type="submit">Ingresar</button>
+            <div class="form-footer">
+                <p>¿No tienes cuenta? <a href="#" onclick="cerrarModal(); mostrarSignup()">Regístrate aquí</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="modalSignup" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <h2>Crear Cuenta</h2>
+        <form id="signupForm">
+            <div class="input-group">
+                <label for="signup-username">Nombre de Usuario</label>
+                <input type="text" id="signup-username" placeholder="Elige un nombre de usuario" required>
+                <div class="input-feedback"></div>
+            </div>
+            <div class="input-group">
+                <label for="signup-email">Correo Electrónico</label>
+                <input type="email" id="signup-email" placeholder="tu@correo.com" required>
+                <div class="input-feedback"></div>
+            </div>
+            <div class="input-group">
+                <label for="signup-password">Contraseña</label>
+                <input type="password" id="signup-password" placeholder="Crea una contraseña segura" required>
+                <div class="password-strength">
+                    <div class="strength-bar"></div>
+                    
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="signup-confirm-password">Confirmar Contraseña</label>
+                <input type="password" id="signup-confirm-password" placeholder="Repite tu contraseña" required>
+                <div class="input-feedback"></div>
+            </div>
+            <div class="form-options">
+                
+            </div>
+            <button type="submit">Crear Cuenta</button>
+            <div class="form-footer">
+                <p>¿Ya tienes cuenta? <a href="#" onclick="cerrarModal(); mostrarLogin()">Inicia sesión aquí</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Agregar también la referencia a script.js -->
+<script src="script.js"></script>
+    <script src="script-restaurantes.js"></script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Historia - Sabores de Potosí</title>
+</head>
+<body>
+    <div class="contenedor">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <h1>Sabores de Potosí</h1>
+            </div>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="restaurantes.html">Restaurantes</a>
+                <a href="historia.html" class="active">Historia</a>
+                <div class="auth-buttons">
+                    <a href="#" class="boton-login" onclick="mostrarLogin()">Login</a>
+                    <a href="#" class="boton-signup" onclick="mostrarSignup()">Sign Up</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Historia de Restaurantes -->
+        <section class="historia-restaurantes">
+            <h2>Historia de Nuestros Restaurantes</h2>
+            <div class="grid-historia">
+                <!-- Doña Mecha -->
+                <div class="card-historia" data-id="4">
+                    <img src="img/domecha.jpg" alt="Doña Mecha">
+                    <div class="card-content">
+                        <h3>Doña Mecha</h3>
+                        <p class="fecha-fundacion">Leyenda viviente de Potosí</p>
+                        <p class="descripcion-corta">No necesita arquitectura colonial para ser una leyenda. Es el punto de referencia para degustar la cocina potosina más pura y auténtica.</p>
+                        <div class="card-footer">
+                            <span class="badge">Tradicional</span>
+                            <a href="detalle-restaurante.html?id=4" class="btn-ver-mas">Ver Historia Completa</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trufa Negra -->
+                <div class="card-historia" data-id="5">
+                    <img src="img/trufanegra.jpg" alt="Trufa Negra">
+                    <div class="card-content">
+                        <h3>Trufa Negra</h3>
+                        <p class="fecha-fundacion">Cocina contemporánea</p>
+                        <p class="descripcion-corta">Ofrece una experiencia gastronómica moderna con toques de innovación en el corazón de Potosí.</p>
+                        <div class="card-footer">
+                            <span class="badge">Moderno</span>
+                            <a href="detalle-restaurante.html?id=5" class="btn-ver-mas">Ver Historia Completa</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tambo Señorial -->
+                <div class="card-historia" data-id="6">
+                    <img src="img/tambose.jpg" alt="Tambo Señorial">
+                    <div class="card-content">
+                        <h3>Tambo Señorial</h3>
+                        <p class="fecha-fundacion">Plaza principal</p>
+                        <p class="descripcion-corta">Ubicado en la plaza principal, ofrece una vista espectacular junto con platos tradicionales potosinos.</p>
+                        <div class="card-footer">
+                            <span class="badge">Vistas</span>
+                            <a href="detalle-restaurante.html?id=6" class="btn-ver-mas">Ver Historia Completa</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- La 4060 -->
+                <div class="card-historia" data-id="2">
+                    <img src="img/res4060.jpg" alt="La 4060">
+                    <div class="card-content">
+                        <h3>La 4060</h3>
+                        <p class="fecha-fundacion">Fundado en 1985</p>
+                        <p class="descripcion-corta">Más de 35 años sirviendo auténtica cocina potosina en el corazón de la ciudad...</p>
+                        <div class="card-footer">
+                            <span class="badge">Clásico</span>
+                            <a href="detalle-restaurante.html?id=2" class="btn-ver-mas">Ver Historia Completa</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phisqa Warmi -->
+                <div class="card-historia" data-id="1">
+                    <img src="img/phisqa.jpg" alt="Phisqa Warmi">
+                    <div class="card-content">
+                        <h3>Phisqa Warmi</h3>
+                        <p class="fecha-fundacion">Fundado en 1995</p>
+                        <p class="descripcion-corta">Un legado familiar que preserva las recetas ancestrales potosinas...</p>
+                        <div class="card-footer">
+                            <span class="badge">Tradicional</span>
+                            <a href="detalle-restaurante.html?id=1" class="btn-ver-mas">Ver Historia Completa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personajes Importantes - -->
+        <section class="personajes-importantes">
+            <h2>Personajes Importantes de la Gastronomía Boliviana</h2>
+            <div class="chefs-columnas">
+                <!-- Columna 1: Marsia Taha -->
+                <div class="columna-chef">
+                    <div class="chef-header">
+                        <img src="img/chefs/taha.jpg" alt="Marsia Taha Mohamed">
+                        <div class="chef-titulo">
+                            <h3>Marsia Taha Mohamed</h3>
+                            <p class="cargo">Exploradora Culinaria & Chef Ejecutiva</p>
+                            <div class="premios">
+                                <span class="badge-premio">🏆 Mejor Chef Femenina LATAM 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chef-historia">
+                        <h4>La Exploradora de la Biodiversidad Boliviana</h4>
+                        <p><strong>Marsia Taha Mohamed</strong> no es solo una chef premiada; es una <strong>exploradora culinaria</strong> que ha dedicado su carrera a redescubrir y revalorizar la inmensa biodiversidad de Bolivia.</p>
+                        
+                        <p><strong>Origen multicultural:</strong> Nacida en Bulgaria de padre palestino y madre boliviana, Marsia creció en un hogar donde el <em>yogurt búlgaro</em> se mezclaba con el <em>za'atar</em> y el <em>hummus</em> palestinos.</p>
+                        
+                        <p><strong>Revelación en Dinamarca:</strong> Durante prácticas en restaurantes nórdicos, comprendió el tesoro desaprovechado que poseía <strong>Bolivia, uno de los países más biodiversos del mundo</strong>.</p>
+                        
+                        <p><strong>Proyecto Sabores Silvestres:</strong> Junto con la Wildlife Conservation Society, ha visitado más de 50 comunidades indígenas para aprender técnicas ancestrales y descubrir ingredientes olvidados.</p>
+                        
+                        <p><strong>Arami:</strong> Su nuevo restaurante ("pedazo de paraíso" en guaraní) es un homenaje a los sabores de las tierras bajas de Bolivia.</p>
+                        
+                        <div class="datos-clave">
+                            <div class="dato">
+                                <strong>Restaurante:</strong> Arami
+                            </div>
+                            <div class="dato">
+                                <strong>Especialidad:</strong> Biodiversidad Andina
+                            </div>
+                            <div class="dato">
+                                <strong>Reconocimiento:</strong> Latin America's 50 Best
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Óscar Mora -->
+                <div class="columna-chef">
+                    <div class="chef-header">
+                        <img src="img/chefs/oscar.jpg" alt="Óscar Mora Velásquez">
+                        <div class="chef-titulo">
+                            <h3>Óscar Mora Velásquez</h3>
+                            <p class="cargo">El Guardián de la Tradición Potosina</p>
+                            <div class="premios">
+                                <span class="badge-premio">👨‍🍳 Maestro de Cocina Tradicional</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chef-historia">
+                        <h4>Preservador de Sabores Ancestrales</h4>
+                        <p><strong>Óscar Edgar Mora Velásquez</strong>, conocido como el <strong>"Chef Mora"</strong>, es una figura fundamental en la gastronomía boliviana, especialmente reconocido por su profundo compromiso con la cocina tradicional y popular.</p>
+                        
+                        <p><strong>Origen potosino:</strong> Nacido el 16 de octubre de 1967 en <strong>Llallagua, norte de Potosí</strong>, el Chef Mora llevó el sabor de su tierra natal a nivel nacional.</p>
+                        
+                        <p><strong>Filosofía culinaria:</strong> A diferencia de la alta cocina de vanguardia, su trabajo se centró en la <strong>autenticidad y preservación</strong> de recetas ancestrales. Fue sinónimo de la <strong>"cocina de la abuela"</strong>.</p>
+                        
+                        <p><strong>Difusión mediática:</strong> Fue una voz constante en medios de comunicación, utilizando su plataforma para enseñar y promover platos típicos de los nueve departamentos:</p>
+                        
+                        <ul class="platos-destacados">
+                            <li><strong>K'alapurca</strong> potosina</li>
+                            <li><strong>Tojori</strong> cochabambino</li>
+                            <li><strong>Buñuelos</strong> tradicionales</li>
+                            <li>Y muchas otras recetas ancestrales</li>
+                        </ul>
+                        
+                        <p><strong>Legado:</strong> Aunque su vida se truncó prematuramente en 2021, su labor como difusor de los sabores auténticos de Bolivia sigue siendo invaluable, asegurando que las futuras generaciones conozcan y valoren la riqueza de los sabores tradicionales.</p>
+                        
+                        <div class="datos-clave">
+                            <div class="dato">
+                                <strong>Especialidad:</strong> Cocina Tradicional
+                            </div>
+                            <div class="dato">
+                                <strong>Región:</strong> Potosí
+                            </div>
+                            <div class="dato">
+                                <strong>Legado:</strong> Guardián Cultural
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 3: Mauricio López -->
+                <div class="columna-chef">
+                    <div class="chef-header">
+                        <img src="img/chefs/maruicio.jpg   " alt="Mauricio López">
+                        <div class="chef-titulo">
+                            <h3>Mauricio López</h3>
+                            <p class="cargo">Pionero de la Alta Cocina Boliviana</p>
+                            <div class="premios">
+                                <span class="badge-premio">🔥 American Express One To Watch 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chef-historia">
+                        <h4>Vanguardia, Producto Local y Fuego</h4>
+                        <p><strong>Mauricio López</strong> es uno de los chefs bolivianos más prominentes de la nueva ola, dedicado a llevar la <strong>alta cocina boliviana</strong> a escenarios internacionales.</p>
+                        
+                        <p><strong>Formación internacional:</strong> Realizó pasantías en la élite mundial culinaria:</p>
+                        
+                        <ul class="experiencia-internacional">
+                            <li><strong>Noma</strong> en Copenhague (Mejor Restaurante del Mundo)</li>
+                            <li><strong>Azurmendi</strong> en España (3 Estrellas Michelin)</li>
+                        </ul>
+                        
+                        <p><strong>Gustu:</strong> Fue parte del equipo fundador del restaurante <strong>Gustu</strong> en La Paz, una iniciativa social de Claus Meyer (cofundador de Noma) para desarrollar la alta cocina con productos locales. Ascendió hasta convertirse en <strong>Jefe de Cocina</strong>.</p>
+                        
+                        <p><strong>Ancestral:</strong> Tras dejar Gustu en 2018, regresó a Bolivia para fundar su propio proyecto: <strong>Ancestral</strong> (junto a su socio Sebastián Giménez).</p>
+                        
+                        <p><strong>Filosofía de Ancestral:</strong> Se enfoca en la <strong>cocina de producto local boliviano a las brasas</strong>, con el fuego como elemento central. La cocina ancestral reinterpreta técnicas tradicionales con un enfoque contemporáneo.</p>
+                        
+                        <p><strong>Reconocimientos:</strong> Ancestral ha recibido un rápido y amplio reconocimiento:</p>
+                        
+                        <div class="reconocimientos">
+                            <span class="reconocimiento">🏆 American Express One To Watch 2022</span>
+                            <span class="reconocimiento">📊 50 Best Discovery</span>
+                            <span class="reconocimiento">🥇 #63 en 50 Best Restaurants LATAM 2024</span>
+                        </div>
+                        
+                        <div class="datos-clave">
+                            <div class="dato">
+                                <strong>Restaurante:</strong> Ancestral
+                            </div>
+                            <div class="dato">
+                                <strong>Técnica:</strong> Cocina a las Brasas
+                            </div>
+                            <div class="dato">
+                                <strong>Innovación:</strong> Producto Local
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Historia de Platos Típicos -->
+        <section class="historia-platos">
+            <h2>Historia de Platos Típicos Potosinos</h2>
+            <div class="grid-platos-historia">
+                <!-- Kalapurca -->
+                <div class="card-plato">
+                    <img src="img/kalapurka.jpg" alt="Kalapurca">
+                    <div class="card-content">
+                        <h3>Kalapurca: El Fósil Viviente de la Cocina Andina</h3>
+                        <p class="origen">Origen: Técnica de Cocción Precolombina</p>
+                        <p class="descripcion-plato">La K'alapurka es mucho más que una sopa andina; es un verdadero testimonio del ingenio culinario precolombino. Su nombre, de origen aimara, significa <strong>"guiso preparado con piedras ardientes"</strong> (qala = piedra, phurk'a = asar/guiso).</p>
+                        
+                        <p><strong>Un Método de Cocción Milenario:</strong> La esencia de la Kalapurca se remonta a un tiempo anterior a la invención de la cerámica. Los pueblos originarios de los Andes desarrollaron un método brillante para hervir alimentos: calentaban <strong>piedras lisas al rojo vivo</strong> en una fogata y luego las sumergían en recipientes llenos de agua e ingredientes.</p>
+                        
+                        <p><strong>El Caldo de las Alturas:</strong> En regiones altas como <strong>Potosí, Bolivia</strong>, la Kalapurca se convirtió en un alimento clave. Es una sopa espesa y altamente nutritiva, ideal para contrarrestar el frío extremo del altiplano y proveer la energía necesaria a los trabajadores, especialmente a los mineros.</p>
+                        
+                        <div class="restaurantes-ofrecen">
+                            <!-- <h4>"Disponible en:"</h4>-->
+                            <div class="lista-restaurantes">
+                                 <!--<a href="detalle-restaurante.html?id=4" class="restaurante-link">Doña Mecha - 25 BS</a>
+                                <a href="detalle-restaurante.html?id=6" class="restaurante-link">Tambo Señorial - 40 BS</a>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ají de Pataskha -->
+                <div class="card-plato">
+                    <img src="img/ajipata.jpg" alt="Ají de Pataskha">
+                    <div class="card-content">
+                        <h3>Ají de Pataskha: La Fuerza del Maíz Potosino</h3>
+                        <p class="origen">Origen: Potosí, Técnica de Alcalinización</p>
+                        <p class="descripcion-plato">El <strong>Ají de Pataskha</strong> es un plato que encapsula la sabiduría y el ingenio de la cocina del altiplano. Originario de Potosí, este guiso es un testimonio de cómo los pueblos andinos transformaron un ingrediente básico, el maíz, en una fuente densa de energía y sabor a través de técnicas ancestrales.</p>
+                        
+                        <p><strong>El Secreto del Pataskha:</strong> El corazón del plato reside en su ingrediente principal, el <strong>pataskha</strong>. No es un maíz cualquiera; es maíz blanco seco que ha sido sometido a un proceso de <strong>alcalinización</strong> mediante cocción con ceniza (o cal).</p>
+                        
+                        <p><strong>El Encuentro de Sabores:</strong> El pataskha se combina con una salsa espesa que le da su color y nombre: el <strong>ají colorado</strong>. Este ají, generalmente molido y frito con cebolla, ajo y especias, provee la calidez necesaria para el clima potosino.</p>
+                        
+                        <p><strong>Un Plato de Resistencia Cultural:</strong> Hoy en día, el Ají de Pataskha no es solo un plato regional; es un <strong>símbolo de identidad potosina</strong>. Representa la perseverancia cultural y la continuidad de las técnicas de procesamiento de alimentos.</p>
+                    </div>
+                </div>
+
+                <!-- Sopa de Maní -->
+                <div class="card-plato">
+                    <img src="img/ajimani.jpg" alt="Sopa de Maní">
+                    <div class="card-content">
+                        <h3>Sopa de Maní: La Crema Tostada del Altiplano</h3>
+                        <p class="origen">Origen: Dieta Andina, Ingrediente Nativo</p>
+                        <p class="descripcion-plato">La <strong>Sopa de Maní</strong> es una de las preparaciones más queridas y representativas de la gastronomía boliviana. Este plato es un reflejo de la <strong>dieta andina</strong>, que supo utilizar el maní (cacahuete), un ingrediente nativo de Sudamérica, como un ingenioso espesante y fuente de energía vital.</p>
+                        
+                        <p><strong>El Maní, Protagonista Tostado:</strong> El elemento distintivo de la sopa es la <strong>pasta de maní tostado y molido</strong>. Esta preparación no solo le otorga al caldo su textura cremosa y densa, sino que también le da un sabor particular: terroso, ligeramente dulce y ahumado.</p>
+                        
+                        <p><strong>Origen y Propósito:</strong> La Sopa de Maní es altamente nutritiva y calórica, lo que la hace ideal para combatir el frío riguroso del altiplano y proporcionar sustento a quienes realizan trabajos físicos pesados, una necesidad histórica en regiones como Potosí.</p>
+                        
+                        <p><strong>Plato de Celebración:</strong> En Potosí y otras regiones del occidente, la Sopa de Maní se eleva a la categoría de <strong>plato festivo</strong>. Es una presencia constante en banquetes de matrimonios, bautizos y grandes celebraciones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="sobre-nosotros">
+                <h3>Sobre Nosotros</h3>
+                <p>Descubre los auténticos sabores de Potosí a través de nuestros restaurantes y platos tradicionales.</p>
+            </div>
+            <div class="redes-sociales">
+                <h3>Síguenos</h3>
+                <div class="iconos-redes">
+                    <a href="#">📱 WhatsApp</a>
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">📷 Instagram</a>
+                    <a href="#">🎵 TikTok</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modales Login/Signup -->
+    <div id="modalLogin" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="login-username">Nombre de Usuario</label>
+                    <input type="text" id="login-username" placeholder="Ingresa tu nombre de usuario" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" placeholder="Ingresa tu contraseña" required>
+                </div>
+                <div class="form-options">
+                </div>
+                <button type="submit">Ingresar</button>
+                <div class="form-footer">
+                    <p>¿No tienes cuenta? <a href="#" onclick="cerrarModal(); mostrarSignup()">Regístrate aquí</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalSignup" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <h2>Crear Cuenta</h2>
+            <form id="signupForm">
+                <div class="input-group">
+                    <label for="signup-username">Nombre de Usuario</label>
+                    <input type="text" id="signup-username" placeholder="Elige un nombre de usuario" required>
+                    <div class="input-feedback"></div>
+                </div>
+                <div class="input-group">
+                    <label for="signup-email">Correo Electrónico</label>
+                    <input type="email" id="signup-email" placeholder="tu@correo.com" required>
+                    <div class="input-feedback"></div>
+                </div>
+                <div class="input-group">
+                    <label for="signup-password">Contraseña</label>
+                    <input type="password" id="signup-password" placeholder="Crea una contraseña segura" required>
+                    <div class="password-strength">
+                        <div class="strength-bar"></div>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="signup-confirm-password">Confirmar Contraseña</label>
+                    <input type="password" id="signup-confirm-password" placeholder="Repite tu contraseña" required>
+                    <div class="input-feedback"></div>
+                </div>
+                <div class="form-options">
+                </div>
+                <button type="submit">Crear Cuenta</button>
+                <div class="form-footer">
+                    <p>¿Ya tienes cuenta? <a href="#" onclick="cerrarModal(); mostrarLogin()">Inicia sesión aquí</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="script-historia.js"></script>
+</body>
+</html>

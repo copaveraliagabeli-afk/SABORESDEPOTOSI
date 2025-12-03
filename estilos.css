@@ -1,0 +1,1492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #c41e3a;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo h1 {
+    color: #c41e3a;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #c41e3a;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.menu a.active {
+    background-color: #c41e3a;
+    color: white !important;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.boton-login, .boton-signup {
+    background-color: #c41e3a;
+    color: white !important;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.boton-login:hover, .boton-signup:hover {
+    background-color: #a01830;
+    transform: translateY(-2px);
+}
+
+/* Buscador */
+.buscador {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.barra-busqueda {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.barra-busqueda input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #c41e3a;
+    border-right: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.barra-busqueda button {
+    background-color: #c41e3a;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.barra-busqueda button:hover {
+    background-color: #a01830;
+}
+
+/* Secciones Base */
+section {
+    margin: 50px 0;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #c41e3a, #a01830);
+}
+
+section h2 {
+    color: #c41e3a;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Agregar al final de estilos.css */
+.destacado.mes-4060 {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/res4060.jpg') center/cover no-repeat !important;
+}
+
+.destacado.mes-4060 h2 {
+    color: white !important;
+}
+
+.destacado.mes-4060 .info-restaurante h3 {
+    color: white !important;
+}
+
+.destacado.mes-4060 .slogan {
+    color: #f0f0f0 !important;
+}
+
+.destacado.mes-4060 .info-restaurante p {
+    color: #e0e0e0 !important;
+}
+
+.platos-destacados.transparente {
+    background: rgba(255,255,255,0.9) !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
+}
+
+/* Carruseles Mejorados */
+.carrusel {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding: 25px 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #c41e3a #f1f1f1;
+}
+
+.carrusel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carrusel::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.carrusel::-webkit-scrollbar-thumb {
+    background: #c41e3a;
+    border-radius: 10px;
+}
+
+.slide {
+    min-width: 250px;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.slide:hover {
+    transform: translateY(-5px);
+}
+
+.slide img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.slide p {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Chefs Mejorados */
+.grid-chefs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.chef {
+    text-align: center;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.chef::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(196, 30, 58, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.chef:hover::before {
+    left: 100%;
+}
+
+.chef:hover {
+    transform: translateY(-10px);
+}
+
+.chef img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #c41e3a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.chef h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.chef p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Footer Mejorado */
+.footer {
+    background: linear-gradient(135deg, #333 0%, #222 100%);
+    color: white;
+    padding: 50px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.sobre-nosotros h3,
+.redes-sociales h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.sobre-nosotros p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.iconos-redes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.iconos-redes a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    background-color: #c41e3a;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.iconos-redes a:hover {
+    background-color: #a01830;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(196, 30, 58, 0.4);
+}
+
+/* Modales Mejorados */
+.modal {
+    display: none;
+    position:fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+}
+
+.modal-contenido {
+    background-color: white;
+    margin: 5% auto;
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    position:center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    animation: modalAppear 0.3s ease;
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cerrar {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.cerrar:hover {
+    color: #c41e3a;
+}
+
+.modal h2 {
+    color: #c41e3a;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.modal input {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.modal input:focus {
+    border-color: #c41e3a;
+    outline: none;
+}
+
+.modal button {
+    width: 100%;
+    padding: 15px;
+    background-color: #c41e3a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.modal button:hover {
+    background-color: #a01830;
+}
+
+/* ========== ESTILOS PARA HISTORIA ========== */
+
+/* Grid de Historia */
+.grid-historia {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card-historia {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.card-historia:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card-historia img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-historia:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-historia h3 {
+    color: #c41e3a;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.fecha-fundacion {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.descripcion-corta {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.badge {
+    background-color: #c41e3a;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.btn-ver-mas {
+    background-color: #c41e3a;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+    background-color: #a01830;
+    transform: translateY(-2px);
+}
+
+/* Personajes Importantes */
+.grid-personajes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card-personaje {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card-personaje:hover {
+    transform: translateY(-10px);
+}
+
+.card-personaje img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-personaje:hover img {
+    transform: scale(1.05);
+}
+
+.card-personaje h3 {
+    color: #c41e3a;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.cargo {
+    color: #666;
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.descripcion {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.restaurante {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.btn-ver-restaurante {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-ver-restaurante:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Historia de Platos */
+.grid-platos-historia {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card-plato {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card-plato:hover {
+    transform: translateY(-10px);
+}
+
+.card-plato img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-plato:hover img {
+    transform: scale(1.05);
+}
+
+.card-plato h3 {
+    color: #c41e3a;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.origen {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.descripcion-plato {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.restaurantes-ofrecen h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.lista-restaurantes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.restaurante-link {
+    background-color: #f8f9fa;
+    color: #c41e3a;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.restaurante-link:hover {
+    background-color: #c41e3a;
+    color: white;
+    transform: translateX(5px);
+}
+
+/* ========== ESTILOS PARA RESTAURANTES ========== */
+
+/* Slider de Restaurantes */
+.slider-restaurantes {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.slider-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide-restaurante {
+    min-width: 100%;
+    display: none;
+}
+
+.slide-restaurante.active {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.restaurante-imagen {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.restaurante-imagen img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.restaurante-imagen:hover img {
+    transform: scale(1.05);
+}
+
+.restaurante-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.restaurante-info h3 {
+    color: #c41e3a;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.slogan {
+    font-style: italic;
+    color: #666;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #c41e3a;
+    padding-left: 20px;
+}
+
+.ubicacion {
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.calificacion {
+    margin-bottom: 30px;
+}
+
+.estrellas {
+    color: #ffc107;
+    font-size: 28px;
+    margin-right: 15px;
+}
+
+.puntuacion {
+    color: #666;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn-ver-detalle {
+    display: inline-block;
+    background-color: #c41e3a;
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(196, 30, 58, 0.3);
+}
+
+.btn-ver-detalle:hover {
+    background-color: #a01830;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(196, 30, 58, 0.4);
+}
+
+/* Controles del Slider */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(196, 30, 58, 0.9);
+    color: white;
+    border: none;
+    padding: 18px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.slider-btn:hover {
+    background-color: #c41e3a;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slider-btn.prev {
+    left: 25px;
+}
+
+.slider-btn.next {
+    right: 25px;
+}
+
+/* Indicadores */
+.slider-indicadores {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+}
+
+.indicador {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicador.active {
+    background-color: #c41e3a;
+    transform: scale(1.2);
+}
+
+/* ========== ESTILOS PARA DETALLE RESTAURANTE ========== */
+
+.detalle-restaurante {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.restaurante-header {
+    position: relative;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.restaurante-portada img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.restaurante-titulo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 40px;
+    border-radius: 0 0 15px 15px;
+}
+
+.restaurante-titulo h2 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.restaurante-titulo .slogan {
+    color: #f0f0f0;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.calificacion-detalle .estrellas {
+    font-size: 32px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.restaurante-contenido {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.info-basica {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    height: fit-content;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.info-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.info-item h4 {
+    color: #c41e3a;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.historia-restaurante h3,
+.platos-destacados h3 {
+    color: #c41e3a;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.historia-restaurante p {
+    line-height: 1.8;
+    color: #555;
+    font-size: 16px;
+}
+
+.grid-platos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.plato-card {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.plato-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.plato-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.plato-card h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.precio {
+    color: #c41e3a;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.acciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    border-top: 2px solid #eee;
+}
+
+.btn-volver {
+    background-color: #6c757d;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(108, 117, 125, 0.3);
+}
+
+.btn-volver:hover {
+    background-color: #545b62;
+    transform: translateY(-3px);
+}
+
+.btn-reservar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+    font-size: 16px;
+}
+
+.btn-reservar:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contenedor {
+        width: 95%;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .restaurante-destacado {
+        grid-template-columns: 1fr;
+    }
+    
+    .slide-restaurante.active {
+        flex-direction: column;
+        padding: 25px;
+    }
+    
+    .restaurante-contenido {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-historia,
+    .grid-personajes,
+    .grid-platos-historia {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .acciones {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .slider-btn {
+        width: 50px;
+        height: 50px;
+        padding: 12px;
+        font-size: 20px;
+    }
+}
+
+/* Estilos para slides clickeables */
+.slide-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.slide-link:hover {
+    transform: translateY(-5px);
+}
+
+.slide-link img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.slide-link:hover img {
+    transform: scale(1.05);
+}
+
+.slide-link p {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.slide-link:hover p {
+    color: #c41e3a;
+}
+
+/* Efecto de overlay en hover */
+.slide {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.slide:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.slide:hover .slide-link img {
+    filter: brightness(0.7);
+}
+/* ========== SLIDER PARA PLATOS DESTACADOS ========== */
+
+.platos-destacados {
+    position: relative;
+    overflow: hidden;
+}
+
+.platos-slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.platos-slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 25px;
+    padding: 10px 0;
+}
+
+.plato-slide {
+    min-width: 280px;
+    flex-shrink: 0;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.plato-slide:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.plato-slide img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.plato-slide:hover img {
+    transform: scale(1.05);
+}
+
+.plato-slide h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.plato-precio {
+    color: #c41e3a;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Controles del slider de platos */
+.platos-slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(196, 30, 58, 0.9);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+.platos-slider-btn:hover {
+    background-color: #c41e3a;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.platos-slider-btn.prev {
+    left: 10px;
+}
+
+.platos-slider-btn.next {
+    right: 10px;
+}
+
+/* Indicadores del slider de platos */
+.platos-slider-indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.plato-indicador {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.plato-indicador.active {
+    background-color: #c41e3a;
+    transform: scale(1.2);
+}
+
+/* Efecto de desvanecimiento en los bordes */
+.platos-slider-container::before,
+.platos-slider-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.platos-slider-container::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(248,249,250,0.9) 0%, transparent 100%);
+}
+
+.platos-slider-container::after {
+    right: 0;
+    background: linear-gradient(270deg, rgba(248,249,250,0.9) 0%, transparent 100%);
+}
+
+
+
+
+
+/* Efectos de hover mejorados para todas las cards */
+.card-historia::before,
+.card-personaje::before,
+.card-plato::before,
+.chef::before,
+.plato-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(196, 30, 58, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.card-historia:hover::before,
+.card-personaje:hover::before,
+.card-plato:hover::before,
+.chef:hover::before,
+.plato-card:hover::before {
+    left: 100%;
+}
+
+/* ESTILOS PARA CHEFS EN COLUMNAS */
+
+.chefs-columnas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.columna-chef {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.columna-chef:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.chef-header {
+    padding: 25px;
+    text-align: center;
+    border-bottom: 2px solid #f0f0f0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.chef-header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #c41e3a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.chef-titulo h3 {
+    color: #c41e3a;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.chef-titulo .cargo {
+    color: #666;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.premios {
+    margin-top: 10px;
+}
+
+.badge-premio {
+    display: inline-block;
+    background-color: #ffc107;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(255, 193, 7, 0.3);
+}
+
+.chef-historia {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chef-historia h4 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.chef-historia p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+    font-size: 14px;
+}
+
+.chef-historia strong {
+    color: #333;
+}
+
+.chef-historia ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.chef-historia li {
+    color: #555;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.platos-destacados {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.experiencia-internacional {
+    background: #e8f4fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.reconocimientos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.reconocimiento {
+    background: #e7f7ed;
+    color: #155724;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.datos-clave {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.dato {
+    text-align: center;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.dato strong {
+    display: block;
+    color: #c41e3a;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+/* Responsive para chefs en columnas */
+@media (max-width: 1024px) {
+    .chefs-columnas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .chefs-columnas {
+        grid-template-columns: 1fr;
+    }
+    
+    .datos-clave {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .datos-clave {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .chef-header {
+        padding: 20px;
+    }
+    
+    .chef-historia {
+        padding: 20px;
+    }
+}
