@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Sabores de Potosí</title>
+</head>
+<body>
+    <div class="contenedor">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <h1>Sabores de Potosí</h1>
+            </div>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="restaurantes.html">Restaurantes</a>
+                <a href="historia.html">Historia</a>
+                <div class="auth-buttons">
+                    <a href="#" class="boton-login" onclick="mostrarLogin()">Login</a>
+                    <a href="#" class="boton-signup" onclick="mostrarSignup()">Sign Up</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Buscador -->
+        <section class="buscador">
+            <div class="barra-busqueda">
+                <input type="text" placeholder="Buscar restaurantes o platos típicos...">
+                <button>🔍</button>
+            </div>
+        </section>
+
+        <!-- Restaurante Destacado -->
+<section class="destacado" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/res4060.jpg') center/cover no-repeat;">
+    <h2 style="color: white;">Restaurante del Mes</h2>
+    <article class="restaurante-destacado">
+        <div class="info-restaurante">
+            <h3 style="color: white;">La 4060</h3>
+            <p class="slogan" style="color: #f0f0f0;">"Cocina potosina auténtica desde 1985"</p>
+            <p style="color: #e0e0e0; margin-top: 15px; line-height: 1.6;">
+                Con más de 35 años de tradición, La 4060 ha sido testigo de la evolución 
+                gastronómica de Potosí mientras mantiene vivas las recetas ancestrales 
+                que han pasado de generación en generación.
+            </p>
+            <a href="detalle-restaurante.html?id=2" class="btn-ver-detalle" style="margin-top: 20px; display: inline-block;">Conocer Más</a>
+        </div>
+        <div class="platos-destacados" style="background: rgba(255,255,255,0.9); padding: 20px; border-radius: 10px;">
+            <h4 style="color: #c41e3a;">Platos Destacados</h4>
+            <div class="carrusel">
+                <div class="slide">
+                    <img src="img/fritanga.jpg" alt="Fritanga Potosina">
+                    <p>Fritanga Potosina</p>
+                </div>
+                <div class="slide">
+                    <img src="img/picana.jpg" alt="Picana Familiar">
+                    <p>Picana Familiar</p>
+                </div>
+                <div class="slide">
+                    <img src="img/chairopace.jpg" alt="Chairo Paceño">
+                    <p>Chairo Paceño</p>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+       <!-- Top 5 Restaurantes -->
+<section class="top-restaurantes">
+    <h2>Top 5 Restaurantes del Mes</h2>
+    <div class="carrusel">
+        <!-- Restaurante 1 -->
+        <div class="slide">
+            <a href="detalle-restaurante.html?id=1" class="slide-link">
+                <img src="img/phisqa.jpg" alt="Phisqa Warmi">
+                <p>Phisqa Warmi</p>
+            </a>
+        </div>
+        
+        <!-- Restaurante 2 -->
+        <div class="slide">
+            <a href="detalle-restaurante.html?id=2" class="slide-link">
+                <img src="img/res4060.jpg" alt="La 4060">
+                <p>La 4060</p>
+            </a>
+        </div>
+        
+        <!-- Restaurante 3 -->
+        <div class="slide">
+            <a href="detalle-restaurante.html?id=3" class="slide-link">
+                <img src="img/tenedordeplata.jpg" alt="El Tenedor de Plata">
+                <p>El Tenedor de Plata</p>
+            </a>
+        </div>
+        
+        <!-- Restaurante 4 -->
+        <div class="slide">
+            <a href="detalle-restaurante.html?id=4" class="slide-link">
+                <img src="img/domecha.jpg" alt="Doña Mecha">
+                <p>Doña Mecha</p>
+            </a>
+        </div>
+        
+        <!-- Restaurante 5 -->
+        <div class="slide">
+            <a href="detalle-restaurante.html?id=5" class="slide-link">
+                <img src="img/restambose.jpeg" alt="Restaurante Tambo Señorial">
+                <p>Restaurante Tambo Señorial</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+        <!-- Top 5 Platos -->
+        <section class="top-platos">
+            <h2>Top 5 Platos del Mes</h2>
+            <div class="carrusel">
+                <div class="slide">
+                    <img src="img/kalapurka.jpg" alt="Plato Top 1">
+                    <p>Kala Purca</p>
+                </div>
+                <div class="slide">
+                    <img src="img/chicharron.jpg" alt="Plato Top 2">
+                    <p>Chicharrón</p>
+                </div>
+                <div class="slide">
+                    <img src="img/fritanga.jpg" alt="Plato Top 3">
+                    <p>Fritanga</p>
+                </div>
+                <div class="slide">
+                    <img src="img/sajta.jpg" alt="Plato Top 4">
+                    <p>Sajta de Pollo</p>
+                </div>
+                <div class="slide">
+                    <img src="img/picana.jpg" alt="Plato Top 5">
+                    <p>Picana</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chefs -->
+        <section class="chefs">
+            <h2>Top 5 Mejores Chefs</h2>
+            <div class="grid-chefs">
+                <div class="chef">
+                    <img src="img/chefs/potosina.jpg" alt="Chef 1">
+                    <h4>Sofía Nogales Thamez</h4>
+                    <p>Phisqa Warmi</p>
+                </div>
+                <div class="chef">
+                    <img src="img/chefs/chefhombre1.jpg" alt="Chef 2">
+                    <h4>Carlos Rodríguez</h4>
+                    <p>La 4060</p>
+                </div>
+                <div class="chef">
+                    <img src="img/chefs/chefmujer1.jpg" alt="Chef 3">
+                    <h4>Ana Martínez</h4>
+                    <p>El Tenedor de Plata</p>
+                </div>
+                <div class="chef">
+                    <img src="img/chefs/chefhombre2.jpg" alt="Chef 4">
+                    <h4>Jorge Vargas</h4>
+                    <p>Doña Mecha</p>
+                </div>
+                <div class="chef">
+                    <img src="img/chefs/martha.jpg" alt="Chef 5">
+                    <h4>Martha Colque</h4>
+                    <p>Restaurante Tambo Señorial</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="sobre-nosotros">
+                <h3>Sobre Nosotros</h3>
+                <p>Descubre los auténticos sabores de Potosí a través de nuestros restaurantes y platos tradicionales.</p>
+            </div>
+            <div class="redes-sociales">
+                <h3>Síguenos</h3>
+                <div class="iconos-redes">
+                    <a href="#">📱 WhatsApp</a>
+                    <a href="#">📘 Facebook</a>
+                    <a href="#">📷 Instagram</a>
+                    <a href="#">🎵 TikTok</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+   <!-- Modales Login/Signup -->
+<div id="modalLogin" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="login-username">Nombre de Usuario</label>
+                <input type="text" id="login-username" placeholder="Ingresa tu nombre de usuario" required>
+            </div>
+            <div class="input-group">
+                <label for="login-password">Contraseña</label>
+                <input type="password" id="login-password" placeholder="Ingresa tu contraseña" required>
+            </div>
+            <div class="form-options">
+               
+                
+            </div>
+            <button type="submit">Ingresar</button>
+            <div class="form-footer">
+                <p>¿No tienes cuenta? <a href="#" onclick="cerrarModal(); mostrarSignup()">Regístrate aquí</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="modalSignup" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <h2>Crear Cuenta</h2>
+        <form id="signupForm">
+            <div class="input-group">
+                <label for="signup-username">Nombre de Usuario</label>
+                <input type="text" id="signup-username" placeholder="Elige un nombre de usuario" required>
+                <div class="input-feedback"></div>
+            </div>
+            <div class="input-group">
+                <label for="signup-email">Correo Electrónico</label>
+                <input type="email" id="signup-email" placeholder="tu@correo.com" required>
+                <div class="input-feedback"></div>
+            </div>
+            <div class="input-group">
+                <label for="signup-password">Contraseña</label>
+                <input type="password" id="signup-password" placeholder="Crea una contraseña segura" required>
+                <div class="password-strength">
+                    <div class="strength-bar"></div>
+                    
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="signup-confirm-password">Confirmar Contraseña</label>
+                <input type="password" id="signup-confirm-password" placeholder="Repite tu contraseña" required>
+                <div class="input-feedback"></div>
+            </div>
+            <div class="form-options">
+                
+            </div>
+            <button type="submit">Crear Cuenta</button>
+            <div class="form-footer">
+                <p>¿Ya tienes cuenta? <a href="#" onclick="cerrarModal(); mostrarLogin()">Inicia sesión aquí</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
