@@ -1,224 +1,233 @@
-// script-detalle-restaurante.js - Versión actualizada
+// script-detalle-restaurante.js
 
-// Base de datos de restaurantes extendida
-const restaurantes = {
+// Base de datos de restaurantes
+const restaurantesData = {
     1: {
-        id: 1,
-        nombre: "Phisqa Warmi",
-        slogan: "Sabor ancestral en cada plato",
-        imagen: "img/phisqa.jpg",
-        ubicacion: "Sucre 55, Villa Imperial de Potosí",
-        horario: "Lunes a Sábado: 8:00 AM - 11:00 PM Domingo: 8:00 AM - 04:00 PM",
-        contacto: "+591 72431628",
+        nombre: "Doña Mecha",
+        slogan: "La cocina potosina más pura y auténtica",
+        imagen: "img/domecha.jpg",
         estrellas: "★★★★★",
-        puntuacion: "4.8 (125 reseñas)",
-        historia: "Fundado en 1995 por la familia Mendoza, Phisqa Warmi nació con la misión de preservar las recetas ancestrales de la región potosina. Nuestro restaurante se ha convertido en un referente de la gastronomía local, combinando técnicas tradicionales con ingredientes frescos de productores locales. Cada plato cuenta una historia que se remonta a las tradiciones de nuestros antepasados.",
+        puntuacion: "4.9 (320 reseñas)",
+        ubicacion: "C. Bustillos 1080, Villa Imperial de Potosí",
+        horario: "Lunes a Sábado: 8:00 a.m. - 2:50 p.m. / 5:00 p.m. - 10:00 p.m.<br>Domingo: Cerrado",
+        contacto: "Teléfono: 65488968",
+        historia: "El Restaurante 'Doña Mecha' no necesita de arquitectura colonial para ser una leyenda en Potosí. Es conocido y venerado por los locales y viajeros como el punto de referencia para degustar la cocina potosina más pura y auténtica.",
         platos: [
-            { nombre: "Kala Purka Tradicional", imagen: "img/kalapurka.jpg", precio: "Bs. 25" },
-            { nombre: "Chicharrón Potosino", imagen: "img/chicharron.jpg", precio: "Bs. 35" },
-            { nombre: "Sajta de Pollo", imagen: "img/sajta.jpg", precio: "Bs. 30" }
+            {
+                nombre: "Kalapurka",
+                precio: "25 BS",
+                imagen: "img/kalapurka.jpg",
+                descripcion: "Harina de maíz, aji colorado, verduras, papa, carne de res, tocino, perejil, acompañado de maíz pelado"
+            },
+            {
+                nombre: "Chacchu",
+                precio: "60 BS",
+                imagen: "img/chacchu.jpg",
+                descripcion: "Filete de cerdo, papa, chuño aji rojo picante, cebolla picada y caldo"
+            },
+            {
+                nombre: "Fricase",
+                precio: "60 BS",
+                imagen: "img/fricase.jpg",
+                descripcion: "Carne de cerdo en caldo de aji picante, maíz pelado, chuño"
+            },
+            {
+                nombre: "Chicharrón",
+                precio: "65 BS",
+                imagen: "img/chicharrond.jpg",
+                descripcion: "Carne de cerdo frita, papa frita, maíz pelado, plátano frito"
+            }
         ]
     },
     2: {
-        id: 2,
-        nombre: "La 4060",
-        slogan: "Cocina potosina auténtica desde 1985",
-        imagen: "img/res4060.jpg",
-        ubicacion: "Av. Villazón #456, Centro, Potosí",
-        horario: "Martes a Domingo: 9:00 AM - 9:00 PM",
-        contacto: "+591 23456789",
-        estrellas: "★★★★☆",
-        puntuacion: "4.6 (89 reseñas)",
-        historia: "Con más de 35 años de experiencia, La 4060 ha sido testigo de la evolución gastronómica de Potosí mientras mantiene vivas las recetas que han pasado de generación en generación. Nuestro fundador, Don Carlos Rodríguez, comenzó este proyecto con la visión de crear un espacio donde los sabores auténticos nunca se perdieran.",
+        nombre: "Phisqa Warmi",
+        slogan: "Sabor ancestral en cada plato",
+        imagen: "img/phisqa.jpg",
+        estrellas: "★★★★★",
+        puntuacion: "4.9 (203 reseñas)",
+        ubicacion: "Sucre 55, Villa Imperial de Potosí",
+        horario: "Lunes a Sábado: 8:00 a.m. - 11:00 p.m.<br>Domingo: 8:00 a.m. - 4:00 p.m.",
+        contacto: "Teléfono: 72431628",
+        historia: "Fundado en 1995, Phisqa Warmi es un legado familiar que preserva las recetas ancestrales potosinas. Su nombre significa 'Cinco Mujeres' en quechua, honrando a las mujeres que han mantenido viva la tradición culinaria a través de las generaciones.",
         platos: [
-            { nombre: "Fritanga Potosina", imagen: "img/fritanga.jpg", precio: "Bs. 28" },
-            { nombre: "Picana Familiar", imagen: "img/picana.jpg", precio: "Bs. 45" },
-            { nombre: "Chairo Paceño", imagen: "img/chairopace.jpg", precio: "Bs. 22" }
+            {
+                nombre: "Charkekan",
+                precio: "50 BS",
+                imagen: "img/charkekan.jpg",
+                descripcion: "Carne de llama deshidratada, queso, huevo, mote de maíz, papa al horno"
+            },
+            {
+                nombre: "Sopa Ligera de Pollo",
+                precio: "25 BS",
+                imagen: "img/sopa-ligera-de-pollo.jpg",
+                descripcion: "Caldo de pollo con verduras"
+            },
+            {
+                nombre: "Pollo a la Plancha",
+                precio: "50 BS",
+                imagen: "img/poolo-a-la-plancha.jpg",
+                descripcion: "Arroz, papa frita, verdura cocida"
+            },
+            {
+                nombre: "Medallones de Champiñón",
+                precio: "50 BS",
+                imagen: "img/medallones-champiñon.jpg",
+                descripcion: "Arroz, papa frita, verdura cocida"
+            }
         ]
     },
     3: {
-        id: 3,
-        nombre: "El Tenedor de Plata",
-        slogan: "Donde el cerro Rico se convierte en sabor",
-        imagen: "img/tenedordeplata.jpg",
-        ubicacion: "Calle Bolívar #789, Plaza 10 de Noviembre, Potosí",
-        horario: "Lunes a Sábado: 7:00 AM - 11:00 PM",
-        contacto: "+591 34567890",
-        estrellas: "★★★★★",
-        puntuacion: "4.9 (203 reseñas)",
-        historia: "Inaugurado en el 2010, El Tenedor de Plata rinde homenaje a la riqueza cultural e histórica del Cerro Rico de Potosí. Nuestra chef, Ana Martínez, fusiona la tradición con la innovación, creando experiencias culinarias únicas que reflejan la grandeza de nuestra tierra. Cada visita es un viaje sensorial a través de la historia potosina.",
+        nombre: "Trufa Negra",
+        slogan: "Experiencia gastronómica contemporánea",
+        imagen: "img/trufanegra.jpg",
+        estrellas: "★★★★☆",
+        puntuacion: "4.7 (215 reseñas)",
+        ubicacion: "Sucre, Villa Imperial de Potosí",
+        horario: "Lunes a Sábado: 7:30 a.m. - 11:00 p.m.<br>Domingo: Cerrado",
+        contacto: "Teléfono: 72448803",
+        historia: "Trufa Negra ofrece una experiencia gastronómica contemporánea con toques de innovación. Es el lugar perfecto para quienes buscan sabores modernos en el corazón de Potosí.",
         platos: [
-            { nombre: "Kala Purka Especial", imagen: "img/kalapurka.jpg", precio: "Bs. 32" },
-            { nombre: "Chicharrón Premium", imagen: "img/chicharron.jpg", precio: "Bs. 40" },
-            { nombre: "Fritanga de la Casa", imagen: "img/fritanga.jpg", precio: "Bs. 35" }
+            {
+                nombre: "Tempura de Camarón",
+                precio: "60 BS",
+                imagen: "img/tempura_de_camaron.jpg",
+                descripcion: "Camarones rebozados en tempura crujiente"
+            },
+            {
+                nombre: "Tallarín de Mariscos",
+                precio: "70 BS",
+                imagen: "img/tallarin_de_mariscos.jpg",
+                descripcion: "Pasta con una selección de mariscos frescos"
+            },
+            {
+                nombre: "Pique Macho",
+                precio: "80 BS",
+                imagen: "img/pique_macho.jpg",
+                descripcion: "Plato tradicional boliviano con carne, salchichas y verduras"
+            }
         ]
     },
     4: {
-        id: 4,
-        nombre: "Doña Mecha",
-        slogan: "Innovación y tradición en cada plato",
-        imagen: "img/domecha.jpg",
-        ubicacion: "Av. Arce #101, Zona Norte, Potosí",
-        horario: "Lunes a Domingo: 11:00 AM - 11:00 PM",
-        contacto: "+591 45678901",
-        estrellas: "★★★★☆",
-        puntuacion: "4.5 (156 reseñas)",
-        historia: "Doña Mecha combina lo mejor de la cocina internacional con los sabores tradicionales potosinos. Fundado en 2015, nuestro restaurante se ha destacado por su ambiente moderno y propuestas culinarias innovadoras que respetan las raíces locales.",
+        nombre: "Tambo Señorial",
+        slogan: "Vistas espectaculares y platos tradicionales",
+        imagen: "img/tambose.jpg",
+        estrellas: "★★★★★",
+        puntuacion: "4.8 (189 reseñas)",
+        ubicacion: "Plaza, Villa Imperial de Potosí",
+        horario: "Lunes a Domingo: 6:30 p.m. - 10:00 p.m.",
+        contacto: "Teléfono: 61637797",
+        historia: "Ubicado estratégicamente en la plaza principal, Tambo Señorial ofrece no solo una gastronomía excepcional sino también una vista espectacular del centro histórico de Potosí. Es el lugar ideal para disfrutar de la cocina tradicional con un ambiente señorial.",
         platos: [
-            { nombre: "Parrillada Factory", imagen: "img/parrillada.jpg", precio: "Bs. 85" },
-            { nombre: "Risotto Andino", imagen: "img/risotto.jpg", precio: "Bs. 45" },
-            { nombre: "Tiradito Potosino", imagen: "img/tiradito.jpg", precio: "Bs. 38" }
+            {
+                nombre: "Kalapurka",
+                precio: "40 BS",
+                imagen: "img/kalapurka.jpg",
+                descripcion: "Sopa de carne, maíz molido, cebolla, zanahoria, arveja, haba, especias, aji rojo, orégano, perejil, carne de res, chchacoma"
+            },
+            {
+                nombre: "Kalapurka Vegetariana",
+                precio: "40 BS",
+                imagen: "img/kalapurka_vegetariana.jpg",
+                descripcion: "Sopa de verduras, maíz molido, cebolla, zanahoria, arveja, haba, especias, aji rojo, orégano, perejil, chachacoma"
+            },
+            {
+                nombre: "Pollo a la Leña (¼)",
+                precio: "44 BS",
+                imagen: "img/pollo_leña.jpg",
+                descripcion: "Pollo cocido a leña, arroz, papas fritas, aderezos, mayonesa, ketchup"
+            },
+            {
+                nombre: "Tacos al Pastor",
+                precio: "42 BS",
+                imagen: "img/tacos_pastor.jpg",
+                descripcion: "Dos tortillas, carne de res filete picado, pico de gallo, cebolla, tomate, aderezos, mayonesa, ketchup, llajua"
+            }
         ]
     },
     5: {
-        id: 5,
-        nombre: "Restaurante Tambo Señorial",
-        slogan: "Elegancia y tradición en cada bocado",
-        imagen: "img/restambose.jpeg",
-        ubicacion: "Calle Sucre #234, Centro Histórico, Potosí",
-        horario: "Martes a Domingo: 12:00 PM - 10:00 PM",
-        contacto: "+591 56789012",
+        nombre: "La 4060",
+        slogan: "Cocina potosina auténtica desde 1985",
+        imagen: "img/res4060.jpg",
         estrellas: "★★★★★",
-        puntuacion: "4.7 (98 reseñas)",
-        historia: "Ubicado en una casona colonial restaurada, Tambo Señorial ofrece una experiencia gastronómica única donde la historia y la cocina se entrelazan. Desde 2008, hemos sido el lugar preferido para quienes buscan sabores auténticos en un ambiente señorial.",
+        puntuacion: "4.8 (125 reseñas)",
+        ubicacion: "Calle Hoyos, Plaza, Villa Imperial de Potosí",
+        horario: "Lunes a Sábado: 8:30 a.m. - 11:30 p.m.<br>Domingo: Cerrado",
+        contacto: "Teléfono: 76160082",
+        historia: "Con más de 35 años de tradición, La 4060 ha sido testigo de la evolución gastronómica de Potosí mientras mantiene vivas las recetas ancestrales que han pasado de generación en generación. Fundado en 1985, es un ícono de la cocina potosina.",
         platos: [
-            { nombre: "Cordero al Horno", imagen: "img/cordero.jpg", precio: "Bs. 65" },
-            { nombre: "Quinoa Real", imagen: "img/quinoa.jpg", precio: "Bs. 32" },
-            { nombre: "Trucha del Lago", imagen: "img/trucha.jpg", precio: "Bs. 42" }
+            {
+                nombre: "Lomo Salteado",
+                precio: "120 BS",
+                imagen: "img/lomo-salteado.jpg",
+                descripcion: "Lomo de res picado salteado con vegetales, estilo peruano"
+            },
+            {
+                nombre: "Medallones 4060",
+                precio: "150 BS",
+                imagen: "img/medallones.jpg",
+                descripcion: "Medallones de res con salsa de camarones"
+            },
+            {
+                nombre: "Fondue (2 personas)",
+                precio: "290 BS",
+                imagen: "img/fondue1.jpg",
+                descripcion: "500gr de filete picado acompañado de 5 salsas y 2 guarniciones a elección"
+            },
+            {
+                nombre: "Milanesa Napolitana",
+                precio: "120 BS",
+                imagen: "img/milanesa-napolitana.jpg",
+                descripcion: "Con jamón, queso y tomate"
+            }
         ]
     }
 };
 
-// Cargar datos del restaurante (función existente - mantener igual)
+// Función para cargar los datos del restaurante
 function cargarRestaurante() {
     const urlParams = new URLSearchParams(window.location.search);
-    const restauranteId = parseInt(urlParams.get('id'));
+    const id = urlParams.get('id');
     
-    const restaurante = restaurantes[restauranteId];
-    
-    if (restaurante) {
-        // Actualizar la página con los datos del restaurante
-        document.getElementById('restaurante-imagen').src = restaurante.imagen;
-        document.getElementById('restaurante-imagen').alt = restaurante.nombre;
-        document.getElementById('restaurante-nombre').textContent = restaurante.nombre;
-        document.getElementById('restaurante-slogan').textContent = restaurante.slogan;
-        document.getElementById('restaurante-ubicacion').textContent = restaurante.ubicacion;
-        document.getElementById('restaurante-horario').textContent = restaurante.horario;
-        document.getElementById('restaurante-contacto').textContent = restaurante.contacto;
-        document.getElementById('restaurante-estrellas').textContent = restaurante.estrellas;
-        document.getElementById('restaurante-puntuacion').textContent = restaurante.puntuacion;
-        document.getElementById('restaurante-historia').textContent = restaurante.historia;
-        
-        // Cargar platos
-        const platosGrid = document.getElementById('platos-grid');
-        platosGrid.innerHTML = '';
-        
-        restaurante.platos.forEach(plato => {
-            const platoHTML = `
-                <div class="plato-card">
-                    <img src="${plato.imagen}" alt="${plato.nombre}">
-                    <h4>${plato.nombre}</h4>
-                    <p class="precio">${plato.precio}</p>
-                </div>
-            `;
-            platosGrid.innerHTML += platoHTML;
-        });
-        
-        // Actualizar título de la página
-        document.title = `${restaurante.nombre} - Sabores de Potosí`;
-    } else {
-        // Redirigir si no se encuentra el restaurante
+    if (!id || !restaurantesData[id]) {
+        // Redirigir a la página de restaurantes si no hay ID válido
         window.location.href = 'restaurantes.html';
-    }
-}
-
-function realizarReserva() {
-    alert('¡Sistema de reservas próximamente! Serás redirigido a nuestro sistema de reservas online.');
-    // Aquí iría la lógica para el sistema de reservas
-}
-
-// Cargar los datos cuando la página esté lista
-document.addEventListener('DOMContentLoaded', cargarRestaurante);
-
-// Función para inicializar el slider de platos
-function inicializarSliderPlatos() {
-    const sliderWrapper = document.querySelector('.platos-slider-wrapper');
-    const slides = document.querySelectorAll('.plato-slide');
-    const prevBtn = document.querySelector('.platos-slider-btn.prev');
-    const nextBtn = document.querySelector('.platos-slider-btn.next');
-    const indicadores = document.querySelectorAll('.plato-indicador');
-    
-    if (!sliderWrapper || !slides.length) return;
-    
-    let slideIndex = 0;
-    const slidesToShow = 4;
-    const slideWidth = slides[0].offsetWidth + 25; // width + gap
-    
-    function updateSlider() {
-        const translateX = -slideIndex * slideWidth;
-        sliderWrapper.style.transform = `translateX(${translateX}px)`;
-        
-        // Actualizar indicadores
-        indicadores.forEach((ind, index) => {
-            ind.classList.toggle('active', index === Math.floor(slideIndex / slidesToShow));
-        });
-        
-        // Ocultar/mostrar botones según la posición
-        prevBtn.style.display = slideIndex === 0 ? 'none' : 'flex';
-        nextBtn.style.display = slideIndex >= slides.length - slidesToShow ? 'none' : 'flex';
+        return;
     }
     
-    function nextSlide() {
-        if (slideIndex < slides.length - slidesToShow) {
-            slideIndex++;
-            updateSlider();
-        }
-    }
+    const restaurante = restaurantesData[id];
     
-    function prevSlide() {
-        if (slideIndex > 0) {
-            slideIndex--;
-            updateSlider();
-        }
-    }
+    // Actualizar la información del restaurante
+    document.getElementById('restaurante-nombre').textContent = restaurante.nombre;
+    document.getElementById('restaurante-slogan').textContent = restaurante.slogan;
+    document.getElementById('restaurante-imagen').src = restaurante.imagen;
+    document.getElementById('restaurante-imagen').alt = restaurante.nombre;
+    document.getElementById('restaurante-estrellas').textContent = restaurante.estrellas;
+    document.getElementById('restaurante-puntuacion').textContent = restaurante.puntuacion;
+    document.getElementById('restaurante-ubicacion').textContent = restaurante.ubicacion;
+    document.getElementById('restaurante-horario').innerHTML = restaurante.horario;
+    document.getElementById('restaurante-contacto').innerHTML = restaurante.contacto;
+    document.getElementById('restaurante-historia').textContent = restaurante.historia;
     
-    // Event listeners
-    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-    
-    // Event listeners para indicadores
-    indicadores.forEach((indicador, index) => {
-        indicador.addEventListener('click', () => {
-            slideIndex = index * slidesToShow;
-            updateSlider();
-        });
-    });
-    
-    // Navegación con teclado
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') prevSlide();
-        if (e.key === 'ArrowRight') nextSlide();
-    });
-    
-    // Auto-slide cada 5 segundos
-    setInterval(() => {
-        if (slideIndex < slides.length - slidesToShow) {
-            nextSlide();
-        } else {
-            slideIndex = 0;
-            updateSlider();
-        }
-    }, 5000);
-    
-    // Inicializar
-    updateSlider();
-    
-    // Ajustar en resize
-    window.addEventListener('resize', updateSlider);
-}
+    // En la función cargarRestaurante, modifica la parte de platos:
+// Cargar los platos (máximo 4)
+const platosGrid = document.getElementById('platos-grid');
+platosGrid.innerHTML = '';
 
-// Llamar la función cuando se cargue la página
-document.addEventListener('DOMContentLoaded', function() {
-    cargarRestaurante();
-    inicializarSliderPlatos();
+// Tomar solo los primeros 4 platos si hay más
+const platosMostrar = restaurante.platos.slice(0, 4);
+
+platosMostrar.forEach(plato => {
+    const platoCard = document.createElement('div');
+    platoCard.className = 'plato-card';
+    platoCard.innerHTML = `
+        <img src="${plato.imagen}" alt="${plato.nombre}">
+        <h4>${plato.nombre}</h4>
+        <p class="precio">${plato.precio}</p>
+        <p>${plato.descripcion}</p>
+    `;
+    platosGrid.appendChild(platoCard);
 });
+}
+
+// Ejecutar cuando se cargue la página
+document.addEventListener('DOMContentLoaded', cargarRestaurante);

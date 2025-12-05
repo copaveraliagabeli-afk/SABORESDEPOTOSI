@@ -51,7 +51,7 @@ header {
 .menu a:hover {
     background-color: #c41e3a;
     color: white;
-    transform: translateY(-2px);
+    transform: translateY(-0.5px);
 }
 
 .menu a.active {
@@ -1489,4 +1489,253 @@ section h2 {
     .chef-historia {
         padding: 20px;
     }
+}
+
+/* VERSIÓN MÁS SIMPLE - 100% CENTRADO */
+.platos-destacados {
+    text-align: center;
+    padding: 40px;
+}
+
+.platos-destacados h3 {
+    color: #c41e3a;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.grid-platos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.plato-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 400px;
+    max-width: 100%;
+}
+
+/* Para 2 columnas */
+.plato-card:nth-child(odd) {
+    margin-right: 15px;
+}
+
+.plato-card:nth-child(even) {
+    margin-left: 15px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .grid-platos {
+        max-width: 500px;
+    }
+    
+    .plato-card {
+        width: 100%;
+        margin: 0 !important;
+    }
+}
+
+/* ESTILOS PARA TOP 5 PLATOS */
+.top-5-platos {
+    margin: 50px 0;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.top-5-platos h2 {
+    color: #c41e3a;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.grid-top-platos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.plato-top-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: #f8f9fa;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.plato-top-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-color: #c41e3a;
+}
+
+.plato-top-imagen {
+    height: 180px;
+    overflow: hidden;
+}
+
+.plato-top-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.plato-top-card:hover .plato-top-imagen img {
+    transform: scale(1.05);
+}
+
+.plato-top-info {
+    padding: 20px;
+}
+
+.plato-top-info h3 {
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.plato-top-info .restaurante {
+    color: #c41e3a;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.plato-top-info .descripcion {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.plato-top-info .ranking {
+    display: inline-block;
+    background-color: #ffc107;
+    color: #333;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* ALTERNATIVA CON FLEXBOX PARA 2x2 */
+.grid-platos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.plato-card {
+    flex: 0 1 calc(50% - 25px); /* 2 columnas con gap */
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Para 3 platos - el tercero se centra */
+.plato-card:nth-child(3):last-child {
+    flex: 0 1 400px;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .plato-card {
+        flex: 0 1 100%;
+        max-width: 500px;
+    }
+    
+    .plato-card:nth-child(3):last-child {
+        flex: 0 1 100%;
+    }
+}
+
+/* ESTILOS PARA GRID 2x2 DE PLATOS */
+.grid-platos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.plato-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Si tienes exactamente 3 platos, el tercero puede ocupar toda la fila */
+.plato-card:nth-child(3):last-child {
+    grid-column: 1 / -1; /* Ocupa ambas columnas */
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid-platos {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+        max-width: 500px;
+    }
+    
+    .plato-card:nth-child(3):last-child {
+        grid-column: 1; /* Vuelve a columna simple */
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .plato-card {
+        padding: 20px;
+    }
+}
+.platos-destacados {
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.platos-destacados h3 {
+    color: #c41e3a;
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Esto es importante: que ocupe ambas columnas */
+.restaurante-contenido .platos-destacados {
+    grid-column: 1 / -1;
 }
